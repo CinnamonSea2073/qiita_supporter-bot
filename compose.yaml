@@ -1,0 +1,13 @@
+services:
+  bot:
+    container_name: qiita_support_bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/usr/src/app
+      - ./config.yaml:/usr/src/app/config.yaml
+    environment:
+      - TZ=Asia/Tokyo
+    # restart: always
+    tty: true

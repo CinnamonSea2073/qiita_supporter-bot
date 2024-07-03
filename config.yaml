@@ -1,0 +1,15 @@
+# DiscordのWebhook URLを設定します。
+# 複数のURLを設定することができます。
+DISCORD_WEBHOOK_URL:
+  - "https://discordapp.com/api/webhooks/"
+
+# QiitaのRSSフィードのURLを設定します。
+# 複数のURLを設定することができます。
+QIITA_RSS_URL:
+  - "https://qiita.com/popular-items/feed"
+
+# RSSの更新を検知する間隔を秒で設定します。
+INTERVAL: 600
+
+# 起動時にメッセージで通知するかどうかを設定します。
+FIRST_MESSAGE: true

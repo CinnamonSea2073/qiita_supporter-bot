@@ -1,0 +1,5 @@
+feedparser
+python-dateutil
+requests
+pyyaml
+treelib
