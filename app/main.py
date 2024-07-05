@@ -13,7 +13,7 @@ def main():
             rss_data = Articles(rss_url)
             filtered_data = rss_data.filter_during_interval()
             if filtered_data != []:
-                content = f"**{rss_data.title}** に新しい記事が追加されました！\n\n{filtered_data}"
+                content = f"**{rss_data.title}** に新しい記事が追加されました！\n\n"+'\n'.join([str(data) for data in filtered_data])
                 print(content)
                 for url in CONFIG.discord_urls:
                     send_discord_message(url, content)
