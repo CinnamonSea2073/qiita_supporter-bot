@@ -9,5 +9,5 @@ services:
       - ./config.yaml:/usr/src/app/config.yaml
     environment:
       - TZ=Asia/Tokyo
-    # restart: always
+    restart: always
     tty: true
