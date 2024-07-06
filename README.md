@@ -18,7 +18,8 @@
 ## How to use
 
 ### 1. configファイルをカスタマイズ
-config.yamlを好きなように書き換えてください。
+`config.template.yaml`を`config.yaml`に名前を変え、
+設定を好きなように書き換えてください。
 詳しくはファイルにコメントが書いてあります。
 
 ### 2. docker compose up
