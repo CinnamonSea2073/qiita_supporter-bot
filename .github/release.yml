@@ -1,0 +1,20 @@
+changelog:
+  exclude:
+    labels:
+      - "close: duplicate"
+      - "close: invalid"
+      - "close: wontfix"
+  categories:
+    - title: 新機能 / Exciting New Features 🎉
+      labels:
+        - "type: new feature"
+    - title: 不具合修正 / Bug fix 🛠
+      labels:
+        - "problem: bug"
+        - "problem: security"
+    - title: ドキュメント / About document 📚
+      labels:
+        - "type: documentation"
+    - title: Other Changes
+      labels:
+        - "*"
