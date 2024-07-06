@@ -21,7 +21,7 @@ class NotificationCog(commands.Cog):
             if filtered_data != []:
                 title = f'{rss_data.title} に新しい記事が追加されました！'
                 print(title)
-                content = '\n'.join([str(data) for data in filtered_data])
+                content = '\n\n'.join([str(data) for data in filtered_data])
                 embed = OriginalEmbed(title=title, description=content)
                 await send_discord_message(self.bot, title, embed)
             else:
