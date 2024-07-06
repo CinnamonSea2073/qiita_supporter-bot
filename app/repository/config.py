@@ -1,8 +1,5 @@
 import yaml
 from model.config import Config
-import pathlib
-import glob
-import os
 
 CONFIG_FILE_PATH = "/usr/src/app/config.yaml"
 

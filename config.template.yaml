@@ -1,7 +1,5 @@
-# DiscordのWebhook URLを設定します。
-# 複数のURLを設定することができます。
-DISCORD_WEBHOOK_URL:
-  - "https://discord.com/api/webhooks/"
+# DiscordBotのトークンを設定します。
+DISCORD_BOT_TOKEN: "ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890ABCDEF1234567890"
 
 # 起動時にメッセージで通知するかどうかを設定します。
 FIRST_MESSAGE: true
@@ -10,8 +8,17 @@ FIRST_MESSAGE: true
 
 # QiitaのRSSフィードのURLを設定します。
 # 複数のURLを設定することができます。
+# 指定しない場合は、この機能は無効になります。
 QIITA_RSS_URL:
   - "https://qiita.com/example/activities.atom"
 
 # RSSの更新を検知する間隔を秒で設定します。
 INTERVAL: 600
+
+# 記事を通知するチャンネルを設定します。
+CHANNEL_ID: 123456789012345678
+
+# Botのテーマカラーを設定します。
+# 16進数のカラーコードを指定してください。
+# 例: #FF0000
+THEME_COLOR: 0x55C500
