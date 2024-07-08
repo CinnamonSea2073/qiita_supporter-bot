@@ -28,6 +28,7 @@ async def on_ready():
 
 bot.load_extensions(
     'cogs.trend',
+    'cogs.notification',
     store=True
 )
 # store=Falseにすると、Cogでエラーが発生していた際にクリティカル警告となる
