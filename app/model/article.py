@@ -8,7 +8,7 @@ from dateutil import parser
 import feedparser
 
 class Article:
-    def __init__(self, entry):
+    def __init__(self, entry) -> None:
         self.title: str = entry.title
         self.link: str = entry.link
         self.published: datetime = parser.parse(entry.published)
@@ -37,7 +37,7 @@ class Article:
         self._qiita_info_data = value
     
 class Articles:
-    def __init__(self, url: str):
+    def __init__(self, url: str) -> None:
         print(url)
         feed = feedparser.parse(url)
         self.articles: list[Article] = []
@@ -49,7 +49,7 @@ class Articles:
     def __str__(self) -> str:
         return "\n\n".join([str(article) for article in self.articles])
 
-    def filter_during_interval(self, interval_time: int = CONFIG.interval):
+    def filter_during_interval(self, interval_time: int = CONFIG.interval) -> list[Article]:
         return [article for article in self.articles if article.is_during_interval(interval_time=interval_time)]
     
     def get_qiita_info(self) -> list[Article]:

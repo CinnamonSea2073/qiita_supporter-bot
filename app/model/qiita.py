@@ -3,13 +3,13 @@ from typing import Optional
 import datetime
 
 class TeamMembership:
-    def __init__(self, team_membership: dict):
+    def __init__(self, team_membership: dict) -> None:
         if team_membership is None:
             return None
         self.name: str = team_membership['name']
 
 class User:
-    def __init__(self, user: dict):
+    def __init__(self, user: dict) -> None:
         self.id: str = user['id']
         self.name: str = user['name']
         self.description: str = user['description']
@@ -28,12 +28,12 @@ class User:
         self.website_url: str = user['website_url']
 
 class Tags:
-    def __init__(self, tags: list[dict]):
+    def __init__(self, tags: list[dict]) -> None:
         self.name: str = tags['name']
         self.versions: list[str] = tags['versions']
 
 class Group:
-    def __init__(self, group: dict):
+    def __init__(self, group: dict) -> None:
         if group is None:
             return None
         self.name: str = group['name']
@@ -45,7 +45,7 @@ class Group:
 
 
 class QiitaInfo:
-    def __init__(self, qiita_info: dict):
+    def __init__(self, qiita_info: dict) -> None:
         self.rendered_body: str = qiita_info['rendered_body']
         self.body: str = qiita_info['body']
         self.coediting: bool = qiita_info['coediting']

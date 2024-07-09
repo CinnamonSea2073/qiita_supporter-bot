@@ -1,5 +1,5 @@
 class Config:
-    def __init__(self, data):
+    def __init__(self, data) -> None:
         self.interval: int = data['INTERVAL']
         self.rss_urls: list[str] = data['QIITA_RSS_URL']
         self.first_message: bool = data['FIRST_MESSAGE']
