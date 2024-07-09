@@ -50,7 +50,8 @@ class Articles:
         return "\n\n".join([str(article) for article in self.articles])
 
     def filter_during_interval(self, interval_time: int = CONFIG.interval) -> list[Article]:
-        return [article for article in self.articles if article.is_during_interval(interval_time=interval_time)]
+        self.articles = [article for article in self.articles if article.is_during_interval(interval_time=interval_time)]
+        return self.articles
     
     def get_qiita_info(self) -> list[Article]:
         for article in self.articles:
