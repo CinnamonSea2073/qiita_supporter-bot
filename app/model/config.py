@@ -6,3 +6,4 @@ class Config:
         self.token: str = data['DISCORD_BOT_TOKEN']
         self.theme_color: int = data['THEME_COLOR']
         self.channel_id: int = data['CHANNEL_ID']
+        self.qiita_access_token: str = data['QIITA_ACCESS_TOKEN']

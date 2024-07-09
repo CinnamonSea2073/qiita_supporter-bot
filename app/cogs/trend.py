@@ -18,16 +18,17 @@ class TrendCog(commands.Cog):
     # コマンド名は全て小文字。関数名の重複に注意。
     @group.command(name="today", description="24時間以内に投稿されトレンド入りした記事を取得します。")
     async def command_trend_today(self, ctx: discord.ApplicationContext):
+        await ctx.response.send_message(content="記事を取得しています。")
         rss_data = Articles("https://qiita.com/popular-items/feed")
         filtered_data = rss_data.filter_during_interval(24*60*60)
         if filtered_data != []:
             title = "以下の記事が24時間以内に投稿され、トレンド入りしました。"
-            content = '\n\n'.join([str(data) for data in filtered_data])
+            content = '\n\n'.join([str(data) + f"\n{data.qiita_info}" for data in filtered_data])
             embed = OriginalEmbed(title=title, description=content)
-            await ctx.response.send_message(embed=embed)
+            await ctx.edit(content=None, embed=embed)
         else:
             embed = ErrorEmbed(description="24時間以内に投稿され、トレンド入りした記事はありません。")
-            await ctx.response.send_message(embed=embed)
+            await ctx.edit(content=None, embed=embed)
 
 def setup(bot: commands.bot):
     bot.add_cog(TrendCog(bot))
